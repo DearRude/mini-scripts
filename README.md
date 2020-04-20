@@ -29,6 +29,7 @@ or clone it [from source](https://savannah.gnu.org/git/?group=stow) and [build i
 Consider :star: this repo.
 
 You also can donate :credit_card: to [me](https://zarinp.al/@simplyebi) in Rials.
+Also, you can check my [dotfiles](https://github.com/DearRude/dot-files). 
 
 ## License :page_facing_up:
 All are licensed under GPLv3.
