@@ -19,6 +19,6 @@ chosen=$(find $audio_dir -type f | cut -d '/' -f6 | dmenu -i -l 10 -fn Monospace
 
 pactl set-sink-input-mute $sink_dir toggle
 pactl move-source-output $webrc_dir alsa_output.pci-0000_00_1f.3.analog-stereo.monitor
-mpv --audio-exclusive=yes --volume=70 "$audio_dir/$chosen">/dev/null
+mpv --audio-exclusive=yes --volume=40 "$audio_dir/$chosen">/dev/null
 pactl move-source-output $webrc_dir alsa_input.pci-0000_00_1f.3.analog-stereo
 pactl set-sink-input-mute $sink_dir toggle
