@@ -4,10 +4,8 @@
 # choose the kind of screenshot to take, including copying the image or even
 # highlighting an area to copy. scrotcucks on suicidewatch right now.
 
-case "$(printf "a selected area (imgur)\\ncurrent window (imgur)\\nfull screen (imgur)\\na selected area (copy)\\ncurrent window (copy)\\nfull screen (copy)\\na selected area\\ncurrent window\\nfull screen" | dmenu -l 9 -i -p "Screenshot which area?")" in
-	"a selected area (imgur)") maim -s | imgur;;
-	"current window (imgur)") maim -i "$(xdotool getactivewindow)" | imgur ;;
-	"full screen (imgur)") maim | imgur;;
+case "$(printf "a selected area (imgur)\\na selected area (copy)\\ncurrent window (copy)\\nfull screen (copy)\\na selected area\\ncurrent window\\nfull screen" | dmenu -l 9 -i -p "Screenshot which area?")" in
+	"a selected area (imgur)") imgur-screenshot;;
 	"a selected area (copy)") maim -s | xclip -selection clipboard -t image/png ;;
 	"current window (copy)") maim -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png ;;
 	"full screen (copy)") maim | xclip -selection clipboard -t image/png ;;

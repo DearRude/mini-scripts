@@ -7,7 +7,7 @@
 # Dependencies: xbacklight
 
 dwm_backlight () {
-    printf "%sﯦ %.0f%s\n" "$SEP1" "$(xbacklight)" "$SEP2"
+    printf "%sﯦ %.0f%s\n" "$SEP1" "$(`sudo xbacklight -get`)" "$SEP2"
 }
 
 dwm_backlight
